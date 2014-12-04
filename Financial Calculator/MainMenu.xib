@@ -690,7 +690,7 @@
                             <rect key="frame" x="1" y="17" width="238" height="117"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView identifier="paymentStream" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="epc-43-vfS" viewBased="YES" id="r1y-QI-yvn">
+                                <tableView identifier="paymentStream" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnReordering="NO" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" headerView="epc-43-vfS" id="r1y-QI-yvn">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -698,83 +698,37 @@
                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                     <tableColumns>
                                         <tableColumn identifier="qtyColumn" width="87" minWidth="40" maxWidth="1000" id="M3j-b1-W9i">
-                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Quantity">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Quantity">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
-                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="cMt-Yg-xRi">
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="right" title="Text Cell" id="cMt-Yg-xRi">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                            <prototypeCellViews>
-                                                <tableCellView identifier="qtyCellView" id="NCE-Fx-GVD">
-                                                    <rect key="frame" x="1" y="1" width="87" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    <subviews>
-                                                        <textField identifier="qty" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pjH-Ce-5BL">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
-                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="5XL-8O-Qja">
-                                                                <font key="font" metaFont="system"/>
-                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            </textFieldCell>
-                                                        </textField>
-                                                    </subviews>
-                                                    <connections>
-                                                        <outlet property="textField" destination="pjH-Ce-5BL" id="1Cz-Md-uWB"/>
-                                                    </connections>
-                                                </tableCellView>
-                                            </prototypeCellViews>
                                             <accessibility description="Qty"/>
                                             <connections>
-                                                <binding destination="myi-r7-Wck" name="value" keyPath="arrangedObjects.paymentQuantity" id="njG-c6-IVp">
-                                                    <dictionary key="options">
-                                                        <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
-                                                    </dictionary>
-                                                </binding>
+                                                <binding destination="9Hq-kj-9pJ" name="value" keyPath="arrangedObjects.paymentQuantity" id="gPB-f4-Scr"/>
                                             </connections>
                                         </tableColumn>
                                         <tableColumn identifier="amtColumn" width="130" minWidth="40" maxWidth="1000" id="fxU-zX-SMX">
-                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="Payment Amount">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="right" title="Payment Amount">
                                                 <font key="font" metaFont="smallSystem"/>
                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                             </tableHeaderCell>
-                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="gH3-1S-tJP">
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="right" title="Text Cell" id="gH3-1S-tJP">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
-                                            <prototypeCellViews>
-                                                <tableCellView identifier="amtCellView" id="Lj9-hj-YU3">
-                                                    <rect key="frame" x="106" y="1" width="130" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                    <subviews>
-                                                        <textField identifier="amt" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="foH-Pf-jM6">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="17"/>
-                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="tGr-Ho-TKr">
-                                                                <font key="font" metaFont="system"/>
-                                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                            </textFieldCell>
-                                                        </textField>
-                                                    </subviews>
-                                                    <connections>
-                                                        <outlet property="textField" destination="foH-Pf-jM6" id="wMK-3E-b0i"/>
-                                                    </connections>
-                                                </tableCellView>
-                                            </prototypeCellViews>
                                             <accessibility description="Amount"/>
                                             <connections>
-                                                <binding destination="myi-r7-Wck" name="value" keyPath="arrangedObjects.paymentAmount" id="iSc-R7-GaY">
-                                                    <dictionary key="options">
-                                                        <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
-                                                    </dictionary>
-                                                </binding>
+                                                <binding destination="9Hq-kj-9pJ" name="value" keyPath="arrangedObjects.paymentAmount" id="xCX-w7-EmN"/>
                                             </connections>
                                         </tableColumn>
                                     </tableColumns>
@@ -802,7 +756,7 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="add:" target="myi-r7-Wck" id="d4L-81-WKF"/>
+                            <action selector="add:" target="9Hq-kj-9pJ" id="Cb8-0t-l1g"/>
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eZ5-PL-EKQ">
@@ -812,28 +766,28 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="remove:" target="myi-r7-Wck" id="tVb-V1-0U9"/>
+                            <action selector="remove:" target="9Hq-kj-9pJ" id="BgD-SF-wal"/>
                         </connections>
                     </button>
                 </subviews>
             </view>
             <point key="canvasLocation" x="-215" y="301"/>
         </window>
-        <arrayController objectClassName="ASCPaymentStream" id="myi-r7-Wck">
+        <customObject id="0N1-fT-BmQ" customClass="Calculator">
+            <connections>
+                <outlet property="paymentsController" destination="9Hq-kj-9pJ" id="Wqu-ZL-B4J"/>
+                <outlet property="tableView" destination="r1y-QI-yvn" id="eWM-E5-Ku8"/>
+            </connections>
+        </customObject>
+        <arrayController objectClassName="ASCPaymentStream" id="9Hq-kj-9pJ">
             <declaredKeys>
                 <string>paymentQuantity</string>
                 <string>paymentAmount</string>
             </declaredKeys>
             <connections>
-                <binding destination="-2" name="contentArray" keyPath="payments" id="1Ho-TP-oN2"/>
+                <binding destination="0N1-fT-BmQ" name="contentArray" keyPath="payments" id="8op-4z-cBN"/>
             </connections>
         </arrayController>
-        <customObject id="0N1-fT-BmQ" customClass="Calculator">
-            <connections>
-                <outlet property="paymentsController" destination="myi-r7-Wck" id="xss-93-MH5"/>
-                <outlet property="tableView" destination="r1y-QI-yvn" id="eWM-E5-Ku8"/>
-            </connections>
-        </customObject>
         <userDefaultsController representsSharedInstance="YES" id="A0w-ND-MZc"/>
     </objects>
 </document>
